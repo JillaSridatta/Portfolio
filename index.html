@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'popins',sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #000;
+    color: #fff;
+}
+textarea{
+    resize: none;
+}
+#header {
+    width: 100%;
+    height: 100vh;
+    /* background-image: url('Profile.png'); */
+    background-image: url('https://i.ibb.co/58DJHSY/Profile.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+name {
+    font-size: 30px;
+    font-weight: bold;
+}
+.container {
+    padding: 10px 10%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1  span{
+    color: #ff004f;
+}
+/* About */
+#img1 {
+    height: 500px;
+    width: 450px;
+    border: 1px solid #fff;
+    background-color: #ababab;
+}
+#about {
+    padding: 80px 0;
+    color: #ababab;
+    /* height: 500px;
+    width: 500px; */
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.about-col-2 #intro{
+    color: bisque;
+    font-weight: 500;
+}
+.sub-title {
+    font-size: 60px;
+    color: #fff;
+    font-weight: 600;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+    color: cadetblue;
+    font-weight: bold;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: inherit;
+}
+.tab-contents{
+display: none;
+
+}
+.tab-contents.active-tab{
+    display: block;
+    color: #fff;
+}
+/* ------------services------- */
+#services{
+padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+text-decoration: none;
+color: #fff;
+font-size: 12px;
+margin-top: 20px;
+display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 10px;
+    transition: height 0.5s;
+}
+.layer h3{
+font-weight: 500;
+margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height:100% ;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+/* ******Contact********* */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 20px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+    cursor: pointer;
+}
+.contact-right form{
+    width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* Message of Submission of Form  */
+#msg{
+    color: #61b752;
+    margin-top: -35px;
+    display: block;
+}
+
+/* CSS FOR SMALL SCREEN */
+nav .fa-solid {
+    display: none;
+}
+@media only screen and (max-width:600px){
+    #header{
+        /* background: url('mobilebackground.jpeg'); */
+        background: url('https://i.ibb.co/Xp7FSt4/mobilebackground.jpg');
+        background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 20px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    .fa-solid{
+        cursor: pointer;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+background: #ff004f;
+position: fixed;
+top: 0;
+right: -200px;
+width: 200px;
+height: 100vh;
+padding-top: 50px;
+z-index: 2;
+transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        cursor: pointer;
+        left: 25px;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left,.contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <name><b style="color: #ff004f;">J</b>illa Sridatta</name>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>HI, I'm <span>Jilla Sridatta</span><br> from Hyderabad</h1>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img  src="https://i.ibb.co/4RfRY6Y/Pic.png" alt="Pic" id="img1"> 
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p id="intro">As a passionate full stack developer, I thrive on crafting innovative solutions that seamlessly bridge the gap between front-end and back-end technologies. My expertise lies in utilizing a wide array of programming languages, frameworks, and tools to bring ideas to life. Throughout my journey, I've had the opportunity to work on some remarkable projects that have left a lasting impact. I believe that every challenge presents an opportunity to grow, and my problem-solving approach enables me to find efficient and effective solutions. With a strong commitment to continuous learning, I keep myself up-to-date with the latest industry trends, ensuring that my work reflects the best practices and cutting-edge advancements. As a team player, I value collaboration and open communication, which fosters an environment of creativity and productivity. Beyond my technical skills, I find joy in exploring various interests outside of coding, bringing a unique perspective to my work. Together, let's create a future that seamlessly integrates technology and enriches user experiences.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <!-- Skills -->
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript/JQuery</li>
+                                <li>SQL</li>
+                                <li>JAVA</li>
+                                <li>C#</li>
+                                <li>SharePoint</li>
+                                <li>Rest API</li>
+                                <li>ASP .Net MVC</li>
+                                <li>MS OFFICE</li>
+                            </ul>
+                        </div>
+                        <!-- Experience -->
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li><span>Company</span> - Synergy Computer Solutions Internatiol Limited</li>
+                                <li><span>Role</span> - Full Stack Developer </li>
+                                <li><span>Duration</span> : April 2023 - Present</li>
+                            </ul>
+                        </div>
+                        <!-- Education -->
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                               <li><span>B.Tech - Mechanical Engineering</span>
+                                <br>Guru Nank Institute of Technology <br>
+                            2018-2022<br>CGPA : 7.0</li>
+                            <li><span>Intermediate - MPC</span>
+                                <br>Sri Chaitanya junior College<br>
+                            2016-2018<br>Percentage - 94.6%</li>
+                            <li><span>SSC</span>
+                                <br>The Laurel High School<br>
+                            2018-2022<br>CGPA : 9.3</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">About Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Passionate web designer crafting captivating and user-centric digital experiences. Aesthetics meet functionality for an impactful online presence. Let's bring your vision to life!</p>
+                        <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>UI/UX designer creating intuitive and delightful user experiences. Aesthetics and functionality merge seamlessly to elevate digital interactions. Let's craft an unforgettable journey for your users!</p>
+                        <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Aspiring to venture into App Design, leveraging my UI/UX and web design expertise. Eager to learn and create intuitive mobile experiences that captivate users. Let's embark on this journey of innovation together!</p>
+                        <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------Portfolio------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work-1.png">
+                    <div class="layer">
+                        <h3>Drawing App</h3>
+                        <p>I have developed an online drawing app for the PC version.
+                        </p>
+                        <a href="https://jillasridatta.github.io/DrawingApp/"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-2.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>"I created a musical website featuring interactive keys that produce different sounds when clicked, similar to a JavaScript drumstick. Experience the joy of playing music with a click!"
+                        </p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>I have developed clones of Flipkart and YouTube. You can have a look at Flipkart Clone.
+                        </p>
+                        <a href="https://jillasridatta.github.io/PROJECT-FLIPKART/"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- -------------Contact----------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                        
+                        <p><i class="fa-sharp fa-solid fa-paper-plane"></i>
+                            jillasridatta@gmailcom</p>
+                        <p><i class="fa-solid fa-square-phone"></i>
+                            7032499437</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/jillasridatta.sridatta"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/jilla_sridatta"><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/jilla-sridatta/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:jillasridatta@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1VWQrR8aikNzdI2bOTZkyt2hqQlcfNhZI/view?usp=download" download="SriDatta Jilla - Resume" class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="your Email" required>
+                        <textarea name="Mesaage" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright ©️ Jilla Sridatta</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    <!-- for smal screen -->
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <!-- LINKED CONTACT FORM -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwcxZjwachDcYaoCXDAkqK2W7wHCziURWqfcbnYuPuneZ9fG93Q9cIkCGumW3ieZAJd/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {msg.innerHTML = "Message sent sucessfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
