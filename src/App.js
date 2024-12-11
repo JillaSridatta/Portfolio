@@ -57,22 +57,35 @@ const App = () => {
               </div>
               {/* Tab Contents */}
               <div className={`tab-contents ${activeTab === 'Skills' ? 'active-tab' : ''}`} id="Skills">
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript/JQuery</li>
-                  <li>SharePoint Online</li>
-                  <li>SPFX</li>
-                  <li>Power Apps</li>
-                  <li>Power Automate</li>
-                  <li>Angular 17</li>
-                  <li>Typescript/React Js</li>
-                  <li>SQL (Oracle)</li>
-                  <li>JAVA</li>
-                  <li>Rest API</li>
-                  <li>MS OFFICE</li>
-                  <li>Mendix</li>
-                </ul>
+                <div className='li-skills'>
+                <div className='li-skills'>
+                    <ul className=''>
+                      <li>SharePoint Online</li>
+                      <li>SPFX</li>
+                      <li>Power Apps</li>
+                      <li>Power Automate</li>
+                      <li>TypeScript</li>
+                    </ul>
+                  </div>
+                  <div className='li-skills'>
+                    <ul className=''>
+                      <li>Angular 17</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript/JQuery</li>
+                      <li>SQL (Oracle)</li>
+                    </ul>
+                  </div>
+                  <div className='li-skills'> 
+                    <ul className=''>
+                      <li>React Js</li>
+                      <li>Rest API</li>
+                      <li>MS OFFICE</li>
+                      <li>Mendix</li>
+                      <li>JAVA</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div className={`tab-contents ${activeTab === 'Experience' ? 'active-tab' : ''}`} id="Experience">
                 <ul>
@@ -102,22 +115,22 @@ const App = () => {
               <i className="fa-solid fa-code"></i>
               <h2>Web Design</h2>
               <p>Passionate web designer crafting captivating and user-centric digital experiences. Aesthetics meet functionality for an impactful online presence. Let's bring your vision to life!</p>
-              {/* <span className="btn">Learn more</span> */}
-              <a href="#">Learn more</a>
+              <span className="btn">Learn more</span>
+              {/* <a href="#">Learn more</a> */}
             </div>
             <div>
               <i className="fa-solid fa-crop-simple"></i>
               <h2>UI/UX Design</h2>
               <p>UI/UX designer creating intuitive and delightful user experiences. Aesthetics and functionality merge seamlessly to elevate digital interactions. Let's craft an unforgettable journey for your users!</p>
-              {/* <span className="btn">Learn more</span> */}
-              <a href="#">Learn more</a>
+              <span className="btn">Learn more</span>
+              {/* <a href="#">Learn more</a> */}
             </div>
             <div>
               <i className="fa-brands fa-app-store"></i>
               <h2>App Design</h2>
               <p>Aspiring to venture into App Design, leveraging my UI/UX and web design expertise. Eager to learn and create intuitive mobile experiences that captivate users. Let's embark on this journey of innovation together!</p>
-              {/* <span className="btn">Learn more</span> */}
-              <a href="#">Learn more</a>
+              <span className="btn">Learn more</span>
+              {/* <a href="#">Learn more</a> */}
             </div>
           </div>
         </div>
@@ -131,31 +144,40 @@ const App = () => {
             <div className="work">
               <img src="https://i.ibb.co/C0NYV2Y/work-1.png" alt="work-1" />
               <div className="layer">
-                <h3>Drawing App</h3>
-                <p>I have developed an online drawing app for the PC version.</p>
-                <a href="https://jillasridatta.github.io/DrawingApp/"><i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                <h1>Drawing App</h1>
+                <p className='iconOpeninNew'>I have developed an online drawing app for the PC version.</p>
+                <a href="https://jillasridatta.github.io/DrawingApp/">
+                  <i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
+                  {/* <i class="material-symbols-outlined">open_in_new</i> */}
+                </a>
               </div>
             </div>
             <div className="work">
               <img src="https://i.ibb.co/W23s46b/work-2.png" alt="work-2" />
-              <div className="layer">
-                <h3>Music App</h3>
-                <p>I created a musical website featuring interactive keys that produce different sounds when clicked, similar to a JavaScript drumstick. Experience the joy of playing music with a click!</p>
-                {/* <span className="btn"><i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></span> */}
-                <a href="#"><i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+              <div className="layer" id="musicapp">
+                <h1>Music App</h1>
+                <p className='iconOpeninNew'>I created a musical website featuring interactive keys that produce different sounds when clicked, similar to a JavaScript drumstick. Experience the joy of playing music with a click!</p>
+                <a href='#musicapp'>
+                  {/* <i class="material-symbols-outlined">open_in_new</i> */}
+                  <i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                {/* <a href="#"><i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a> */}
               </div>
             </div>
             <div className="work">
               <img src="https://i.ibb.co/nzg2rg0/work-3.png" alt="work-3" />
               <div className="layer">
-                <h3>Online Shopping App</h3>
-                <p>I have developed clones of Flipkart and YouTube. You can have a look at Flipkart Clone.</p>
-                <a href="https://jillasridatta.github.io/PROJECT-FLIPKART/"><i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                <h1>Online Shopping App</h1>
+                <p className='iconOpeninNew'>I have developed clones of Flipkart and YouTube. You can have a look at Flipkart Clone.</p>
+                <a href="https://jillasridatta.github.io/PROJECT-FLIPKART/">
+                  {/* <i class="material-symbols-outlined">open_in_new</i> */}
+                  <i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
               </div>
             </div>
           </div>
-          {/* <span className="btn">See more</span> */}
-          <a href="#" className="btn">See more</a>
+          <span className="btn">See more</span>
+          {/* <a href="#" className="btn">See more</a> */}
         </div>
       </div>
 
@@ -165,18 +187,24 @@ const App = () => {
           <div className="row">
             <div className="contact-left">
               <h1 className="sub-title">Contact Me</h1>
+              {/* <p><i class="material-symbols-outlined">mail</i> jillasridatta@gmail.com</p>
+              <p><i class="material-symbols-outlined">call</i> 7032499437</p> */}
               <p><i className="fa-sharp fa-solid fa-paper-plane"></i> jillasridatta@gmail.com</p>
               <p><i className="fa-solid fa-square-phone"></i> 7032499437</p>
               <div className="social-icons">
                 <a href="https://www.facebook.com/jillasridatta.sridatta"><i className="fa-brands fa-facebook"></i></a>
-                <a href="https://twitter.com/jilla_sridatta"><i className="fa-brands fa-twitter"></i></a>
+                <a href="https://twitter.com/jilla_sridatta">
+                  <i className="fa-brands fa-twitter"></i>
+                </a>
                 <a href="https://instagram.com/jillasridatta?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><i className="fa-brands fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/jilla-sridatta/"><i className="fa-brands fa-linkedin"></i></a>
                 <a href="mailto:jillasridatta@gmail.com"><i className="fa-solid fa-envelope"></i></a>
               </div>
-              <a href="/JillaSridattaResume.pdf" download="SriDatta Jilla - Resume" className="btn btn2">Download Resume</a>
+              <a href="/JillaSridattaResume.pdf" download="SriDatta Jilla - Resume" className="btn btn2 download-resume">Download Resume <i class="fa-solid fa-download d-resume"></i></a>
             </div>
-            <ContactForm ></ContactForm>
+            <div className='contact-right'>
+              <ContactForm ></ContactForm>
+            </div>
             {/* <div className="contact-right">
               <form name="submit-to-google-sheet">
                 <input type="text" name="Name" placeholder="Your Name" required />

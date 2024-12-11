@@ -18,7 +18,7 @@ textarea{
   width: 100%;
   height: 100vh;
   /* background-image: url('Profile.png'); */
-  background-image: url('https://i.ibb.co/58DJHSY/Profile.png');
+  /* background-image: url('https://i.ibb.co/58DJHSY/Profile.png'); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -193,6 +193,50 @@ display: inline-block;
   background: #ff004f;
   transform: translateY(-10px);
 }
+.services-list div:hover .btn{
+  /* transform: translateX(-10px); */
+  background-color: snow;
+  color: #ff004f;
+}
+
+.contact-left p{
+  display: flex;
+  align-items: center;
+}
+.btn-submit{
+  display: block;
+  /* margin: 50px auto; */
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: snow;
+  transition: 0.5s;
+  background-color: #ff004f;
+  font-size: 14px;
+  font-weight: 530;
+}
+
+.Msg-Green{
+  color: #61b752;
+}
+.Msg-Red{
+  color: rgb(235, 9, 9);
+}
+
+.li-skills{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.li-skills ul li:hover{
+  color: #b54769;
+  cursor: pointer;
+}
+
 #portfolio{
   padding: 50px 0;
 }
@@ -236,6 +280,19 @@ font-weight: 500;
 margin-bottom: 20px;
 }
 .layer a{
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.layer span{
   margin-top: 20px;
   color: #ff004f;
   text-decoration: none;
@@ -293,10 +350,31 @@ margin-bottom: 20px;
   display: inline-block;
   transition: transform 0.5s;
 }
-.social-icons a:hover{
+.social-icons a:hover {
   color: #ff004f;
   transform: translateY(-5px);
 }
+
+.d-resume{
+  display: none;
+}
+
+.download-resume:hover,.btn-submit:hover{
+  background-color: snow !important;
+  color: #ff004f;
+  transform: translateY(-5px);
+  border-color: snow;
+  display: flex !important;
+  margin-left: 0;
+  /* width:270px; */
+  /* padding-left: 0; */
+}
+.download-resume:hover .d-resume{
+  display: block;
+  margin-left: 10px;
+  transition: ease-in-out;
+}
+
 .btn.btn2{
   display: inline-block;
   background: #ff004f;
@@ -327,8 +405,8 @@ form input,form textarea{
 
 /* Message of Submission of Form  */
 #msg{
-  color: #61b752;
-  margin-top: -35px;
+  /* color: #61b752; */
+  margin-top: 5px;
   display: block;
 }
 
@@ -336,10 +414,26 @@ form input,form textarea{
 nav .fa-solid {
   display: none;
 }
+
+a.material-symbols-outlined{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a .material-symbols-outlined{
+ margin-top: 15px;
+}
+
+.iconOpeninNew{
+  font-size: 12px;
+  margin-top: 2px;
+}
+
 @media only screen and (max-width:600px){
   #header{
-      /* background: url('mobilebackground.jpeg'); */
-      background: url('https://i.ibb.co/Xp7FSt4/mobilebackground.jpg');
+      background: url('./Profile.png') !important;
+      /* background: url('https://i.ibb.co/Xp7FSt4/mobilebackground.jpg'); */
       background-size: cover;
   background-position: center;
   background-attachment: fixed;
