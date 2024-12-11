@@ -61,20 +61,24 @@ const App = () => {
                   <li>HTML</li>
                   <li>CSS</li>
                   <li>JavaScript/JQuery</li>
-                  <li>SQL</li>
+                  <li>SharePoint Online</li>
+                  <li>SPFX</li>
+                  <li>Power Apps</li>
+                  <li>Power Automate</li>
+                  <li>Angular 17</li>
+                  <li>Typescript/React Js</li>
+                  <li>SQL (Oracle)</li>
                   <li>JAVA</li>
-                  <li>C#</li>
-                  <li>SharePoint</li>
                   <li>Rest API</li>
-                  <li>ASP .Net MVC</li>
                   <li>MS OFFICE</li>
+                  <li>Mendix</li>
                 </ul>
               </div>
               <div className={`tab-contents ${activeTab === 'Experience' ? 'active-tab' : ''}`} id="Experience">
                 <ul>
-                  <li><span>Company</span> - Synergy Computer Solutions International Limited</li>
-                  <li><span>Role</span> - Full Stack Developer</li>
-                  <li><span>Duration</span> - April 2023 - Present</li>
+                  <li><span>Company :</span> Synergy Computer Solutions International Limited</li>
+                  <li><span>Role :</span> Full Stack Developer</li>
+                  <li><span>Duration :</span> April 2023 - Present</li>
                 </ul>
               </div>
               <div className={`tab-contents ${activeTab === 'Education' ? 'active-tab' : ''}`} id="Education">
