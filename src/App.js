@@ -98,19 +98,19 @@ const App = () => {
               <i className="fa-solid fa-code"></i>
               <h2>Web Design</h2>
               <p>Passionate web designer crafting captivating and user-centric digital experiences. Aesthetics meet functionality for an impactful online presence. Let's bring your vision to life!</p>
-              <a href="#">Learn more</a>
+              <a href="">Learn more</a>
             </div>
             <div>
               <i className="fa-solid fa-crop-simple"></i>
               <h2>UI/UX Design</h2>
               <p>UI/UX designer creating intuitive and delightful user experiences. Aesthetics and functionality merge seamlessly to elevate digital interactions. Let's craft an unforgettable journey for your users!</p>
-              <a href="#">Learn more</a>
+              <a href="">Learn more</a>
             </div>
             <div>
               <i className="fa-brands fa-app-store"></i>
               <h2>App Design</h2>
               <p>Aspiring to venture into App Design, leveraging my UI/UX and web design expertise. Eager to learn and create intuitive mobile experiences that captivate users. Let's embark on this journey of innovation together!</p>
-              <a href="#">Learn more</a>
+              <a href="">Learn more</a>
             </div>
           </div>
         </div>
@@ -134,7 +134,7 @@ const App = () => {
               <div className="layer">
                 <h3>Music App</h3>
                 <p>I created a musical website featuring interactive keys that produce different sounds when clicked, similar to a JavaScript drumstick. Experience the joy of playing music with a click!</p>
-                <a href="#"><i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href=""><i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
               </div>
             </div>
             <div className="work">
@@ -146,7 +146,7 @@ const App = () => {
               </div>
             </div>
           </div>
-          <a href="#" className="btn">See more</a>
+          <a href="" className="btn">See more</a>
         </div>
       </div>
 
